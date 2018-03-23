@@ -1,0 +1,32 @@
+{
+  "network": "testnet",
+  "port": 3001,
+  "services": [
+    "insight-api",
+    "bitcoind",
+    "insight-ui",
+    "web"
+  ],
+  "servicesConfig": {
+    "bitcoind": {
+      "spawn": {
+        "datadir": "./data",
+        "exec": "/home/vinove/.nvm/v9.5.0/lib/node_modules/bitcore-node/bin/bitcoind"
+      }
+    }
+  },
+  "insight-api": {
+    "routePrefix": "api",
+    "disableRateLimiter": true,
+    "enableCache": true
+  },
+  "fee": {
+    "rpc": {
+      "user": "root",
+      "pass": "fit75Droplets",
+      "host": "138.68.102.67",
+      "protocol": "http",
+      "port": 18332
+    }
+  }
+}
